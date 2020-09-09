@@ -14,9 +14,9 @@ public class Main {
 			binDir.add(new File("vi", 10000));
 			binDir.add(new File("latex", 20000));
 			rootDir.printList();
-			
+
 			System.out.println();
-			
+
 			System.out.println("Making user entryies...");
 			Directory yuki = new Directory("yuki");
 			Directory hanako = new Directory("hanako");
@@ -30,6 +30,12 @@ public class Main {
 			tomura.add(new File("game.doc", 400));
 			tomura.add(new File("junk.mail", 500));
 			rootDir.printList();
+
+			System.out.println("");
+			File file = new File("Example.java", 50);
+			yuki.add(file);
+			System.out.println("file =" + file.getFullName());
+			System.out.println("yuki =" + yuki.getFullName());
 		} catch (FileTreatmentException e) {
 			e.printStackTrace();
 		}
